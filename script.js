@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(createHeart, 100);
 
     botonNo.addEventListener("mouseover", function () {
-        const maxX = window.innerWidth - botonNo.offsetWidth - 20; // Evita que salga por los lados
-        const maxY = window.innerHeight - botonNo.offsetHeight - 20; // Evita que salga por abajo
+        const maxX = window.innerWidth - botonNo.offsetWidth - 20; 
+        const maxY = window.innerHeight - botonNo.offsetHeight - 20; 
 
         let x, y;
 
@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
         botonNo.style.top = `${y}px`;
     });
 
-    // Mostrar botón de descargar carta al hacer clic en "Sí 💖"
     botonSi.addEventListener("click", function () {
         descargar.style.display = "block";
         descargar.style.animation = "fadeIn 1s ease-in-out";
