@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const botonSi = document.getElementById("botonSi");
     const descargar = document.getElementById("descargar");
 
+    // Ocultar el botón de descarga desde el inicio
     descargar.style.display = "none";
 
     function createHeart() {
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(createHeart, 100);
 
+    // Hacer que el botón "No" se mueva al pasar el mouse
     botonNo.addEventListener("mouseover", function () {
         const maxX = window.innerWidth - botonNo.offsetWidth - 20; 
         const maxY = window.innerHeight - botonNo.offsetHeight - 20; 
@@ -41,8 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
         botonNo.style.top = `${y}px`;
     });
 
+    // Al hacer clic en "Sí", mostrar mensaje en lugar de descargar archivo
     botonSi.addEventListener("click", function () {
-        descargar.style.display = "block";
-        descargar.style.animation = "fadeIn 1s ease-in-out";
+        alert("¡Sabía que dirías que sí! Te veo en la tarde. ❤️");
     });
 });
+
